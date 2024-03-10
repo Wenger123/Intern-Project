@@ -1,0 +1,135 @@
+<!-- newRequestReport.jrxml -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="DetailsReport"
+              language="java"
+              columnWidth="550"
+              pageWidth="595"
+              pageHeight="842"
+              whenNoDataType="AllSectionsNoDetail"
+              columnSpacing="10"
+              leftMargin="10"
+              rightMargin="10"
+              topMargin="20"
+              bottomMargin="20">
+
+    <style name="tableHeader" mode="Opaque" backcolor="#3E3D3D" forecolor="#FFFFFF">
+        <box>
+            <!--            <pen lineWidth="1.0" lineColor="#000000"/>-->
+        </box>
+    </style>
+
+
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+
+    <field name="id" class="java.lang.Long"/>
+    <field name="client"/>
+    <field name="contactName"/>
+    <field name="startDate"/>
+    <field name="phoneNo"/>
+    <field name="poNumber"/>
+    <field name="endDate" class="java.lang.String"/>
+    <field name="status"/>
+
+    <title>
+        <band height="50">
+            <staticText>
+                <reportElement x="0" y="10" width="150" height="30"/>
+                <text><![CDATA[Tasks Report]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <columnHeader>
+        <band height="20">
+            <staticText>
+                <reportElement x="0" y="0" width="20" height="20" style="tableHeader">
+                    <property name="com.jaspersoft.studio.components.table.model.column.name" value="ID"/>
+                </reportElement>
+                <text><![CDATA[ID]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="20" y="0" width="50" height="20" style="tableHeader">
+                    <property name="com.jaspersoft.studio.components.table.model.column.name" value="Client"/>
+                </reportElement>
+                <text><![CDATA[Client]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="70" y="0" width="130" height="20" style="tableHeader">
+                    <property name="com.jaspersoft.studio.components.table.model.column.name" value="Contact Name"/>
+                </reportElement>
+                <text><![CDATA[Contact Name]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="200" y="0" width="80" height="20" style="tableHeader">
+                    <property name="com.jaspersoft.studio.components.table.model.column.name" value="Start Date"/>
+                </reportElement>
+                <text><![CDATA[Start Date]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="280" y="0" width="100" height="20" style="tableHeader">
+                    <property name="com.jaspersoft.studio.components.table.model.column.name" value="Phone No"/>
+                </reportElement>
+                <text><![CDATA[Phone No]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="380" y="0" width="70" height="20" style="tableHeader">
+                    <property name="com.jaspersoft.studio.components.table.model.column.name" value="Po Num"/>
+                </reportElement>
+                <text><![CDATA[Po Num]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="450" y="0" width="80" height="20" style="tableHeader">
+                    <property name="com.jaspersoft.studio.components.table.model.column.name" value="End Date"/>
+                </reportElement>
+                <text><![CDATA[End Date]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="530" y="0" width="50" height="20" style="tableHeader">
+                    <property name="com.jaspersoft.studio.components.table.model.column.name" value="Status"/>
+                </reportElement>
+                <text><![CDATA[Status]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="20">
+            <textField>
+                <reportElement x="0" y="0" width="20" height="20"/>
+                <textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="20" y="0" width="50" height="20"/>
+                <textFieldExpression><![CDATA[$F{client}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="70" y="0" width="130" height="20"/>
+                <textFieldExpression><![CDATA[$F{contactName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="200" y="0" width="80" height="20"/>
+                <textFieldExpression><![CDATA[$F{startDate}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="280" y="0" width="100" height="20"/>
+                <textFieldExpression><![CDATA[$F{phoneNo}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="380" y="0" width="70" height="20"/>
+                <textFieldExpression><![CDATA[$F{poNumber}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="450" y="0" width="80" height="20"/>
+                <textFieldExpression><![CDATA[$F{endDate}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="530" y="0" width="50" height="20"/>
+                <textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+</jasperReport>
